@@ -218,9 +218,13 @@ exports.setMyOrgCollection = function(Uid, orgDomain, orgAppKey, teams = [], def
  */
 exports.getMyOrgCollectionDoc = function(Uid, orgDomain) {
     const getMyOrgPromise = db.collection("Users").doc(Uid).collection("MyOrganizations").doc(orgDomain).get().then((doc) => {
+        console.log("Getting the My Organization Collection Data");
         if (doc.exists) {
+            console.log("Data Exists");
+            console.log(doc.data());
             return doc.data();
         } else {
+            console.log("Doc does not exist");
             return;
         }
     });

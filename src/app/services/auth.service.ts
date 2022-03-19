@@ -131,7 +131,7 @@ export class AuthService {
     }));
   }
 
-  getMyOrgCollectionDocs(uid, appKey) {
+  getMyOrgCollectionDocs(uid:string, appKey:string) {
     const callable = this.functions.httpsCallable("users/getMyOrgCollectionDocs");
      callable({Uid: uid, OrgAppKey: appKey}).pipe(
       map(actions => {
