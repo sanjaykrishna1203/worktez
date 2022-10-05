@@ -2,9 +2,9 @@ import { Component, NgZone, OnInit } from '@angular/core';
 import { AngularFireFunctions } from '@angular/fire/compat/functions';
 import { Router } from '@angular/router';
 import { type } from 'os';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { BackendService } from 'src/app/services/backend/backend.service';
-import { NativeWindowService } from 'src/app/services/native-window.service';
+import { NativeWindowService } from 'src/app/services/native-window/native-window.service';
 import { StartServiceService } from 'src/app/services/start/start-service.service';
 import { SubscriptionService } from 'src/app/services/subscription/subscription.service';
 
